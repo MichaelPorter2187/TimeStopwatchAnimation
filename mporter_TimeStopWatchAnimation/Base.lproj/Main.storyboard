@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XHy-Lf-TvL">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stopwatch-->
+        <scene sceneID="rNB-ui-cSg">
+            <objects>
+                <viewController id="Sqx-az-2pD" customClass="StopwatchViewController" customModule="mporter_TimeStopWatchAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uy0-OI-MBx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(insert stopwatch time here)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLx-hp-TBO">
+                                <rect key="frame" x="46.666666666666657" y="99" width="300" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="bEK-LX-Wou"/>
+                                    <constraint firstAttribute="height" constant="100" id="nRm-Pl-h6X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXY-cX-UFs">
+                                <rect key="frame" x="71.666666666666671" y="274" width="90.000000000000014" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="MQl-9s-iAN"/>
+                                    <constraint firstAttribute="width" constant="90" id="iSB-19-nTe"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                                <connections>
+                                    <action selector="Start:" destination="Sqx-az-2pD" eventType="touchUpInside" id="PFU-0j-kxX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkx-Au-oRI">
+                                <rect key="frame" x="231.66666666666663" y="274" width="90" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="cAR-vv-Dhp"/>
+                                    <constraint firstAttribute="height" constant="35" id="wLR-6K-YpX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Stop"/>
+                                <connections>
+                                    <action selector="Stop:" destination="Sqx-az-2pD" eventType="touchUpInside" id="Kq3-Q9-jD3"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Hand-Holding-Classic-Stopwatch-Timer-Graphics-4253899-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="1Kn-bL-ulb">
+                                <rect key="frame" x="-92" y="317" width="737" height="512"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="512" id="fvM-aI-Zvf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uL0-zQ-cRK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1Kn-bL-ulb" secondAttribute="bottom" constant="23" id="94B-VZ-Nr6"/>
+                            <constraint firstItem="wkx-Au-oRI" firstAttribute="centerX" secondItem="uy0-OI-MBx" secondAttribute="centerX" constant="80" id="FBG-P6-SC0"/>
+                            <constraint firstAttribute="trailing" secondItem="1Kn-bL-ulb" secondAttribute="trailing" constant="-252" id="Qir-Wj-ZOB"/>
+                            <constraint firstItem="GXY-cX-UFs" firstAttribute="top" secondItem="PLx-hp-TBO" secondAttribute="bottom" constant="75" id="U4n-n4-OmF"/>
+                            <constraint firstItem="PLx-hp-TBO" firstAttribute="centerX" secondItem="uy0-OI-MBx" secondAttribute="centerX" id="ZTs-MT-4YO"/>
+                            <constraint firstItem="GXY-cX-UFs" firstAttribute="centerX" secondItem="uy0-OI-MBx" secondAttribute="centerX" constant="-80" id="aUp-l1-LGw"/>
+                            <constraint firstItem="wkx-Au-oRI" firstAttribute="top" secondItem="PLx-hp-TBO" secondAttribute="bottom" constant="75" id="afJ-9W-izR"/>
+                            <constraint firstItem="PLx-hp-TBO" firstAttribute="top" secondItem="uL0-zQ-cRK" secondAttribute="top" constant="40" id="iOh-xR-WDT"/>
+                            <constraint firstItem="1Kn-bL-ulb" firstAttribute="leading" secondItem="uy0-OI-MBx" secondAttribute="leading" constant="-92" id="wCB-S1-3UO"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Stopwatch" image="stopwatch" catalog="system" id="yfA-iH-S3u"/>
+                    <connections>
+                        <outlet property="startLabel" destination="GXY-cX-UFs" id="VoE-4v-DIT"/>
+                        <outlet property="stopLabel" destination="wkx-Au-oRI" id="KdO-Kj-aUZ"/>
+                        <outlet property="timerLabel" destination="PLx-hp-TBO" id="W0j-D9-ziv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CHG-Bk-Bjo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="403.81679389312973" y="14.788732394366198"/>
+        </scene>
+        <!--Animation-->
+        <scene sceneID="Ark-pN-lIm">
+            <objects>
+                <viewController id="mYx-jo-COj" customClass="AnimationViewController" customModule="mporter_TimeStopWatchAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LM0-My-qfG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e55-C6-ohE">
+                                <rect key="frame" x="126.66666666666669" y="545" width="140" height="138.66666666666674"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="BVP-qj-gDt"/>
+                                    <constraint firstAttribute="width" constant="140" id="uBB-ff-A1w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="49"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="playpause.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="PlayStop:" destination="mYx-jo-COj" eventType="touchUpInside" id="xOG-RQ-fGM"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T0R-hf-8Wc">
+                                <rect key="frame" x="0.0" y="148.33333333333334" width="393" height="295.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="393" id="D90-Tu-lOK"/>
+                                    <constraint firstAttribute="height" constant="295.60000000000002" id="a3s-1A-Nxc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Emc-o0-D0a"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Emc-o0-D0a" firstAttribute="bottom" secondItem="e55-C6-ohE" secondAttribute="bottom" constant="85" id="18r-Zo-8My"/>
+                            <constraint firstItem="e55-C6-ohE" firstAttribute="top" secondItem="T0R-hf-8Wc" secondAttribute="bottom" constant="100" id="SC5-Sk-U1c"/>
+                            <constraint firstItem="e55-C6-ohE" firstAttribute="centerX" secondItem="LM0-My-qfG" secondAttribute="centerX" id="Vr2-sD-fLZ"/>
+                            <constraint firstItem="T0R-hf-8Wc" firstAttribute="centerX" secondItem="LM0-My-qfG" secondAttribute="centerX" id="uXA-0U-AqE"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Animation" image="figure.dance" catalog="system" id="oU7-yf-Jf5"/>
+                    <connections>
+                        <outlet property="PictureView" destination="T0R-hf-8Wc" id="RV7-vb-PSP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1eg-K6-9pE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1307.6335877862596" y="14.788732394366198"/>
+        </scene>
+        <!--Date-->
+        <scene sceneID="GlU-r4-RRj">
+            <objects>
+                <viewController id="GeC-7T-CTo" customClass="DateViewController" customModule="mporter_TimeStopWatchAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="btO-Bf-SRh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpiralClock.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="PUn-Kx-oqA">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(insert date here)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36w-ab-icz">
+                                <rect key="frame" x="51" y="229" width="291" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="JpM-IR-2c1"/>
+                                    <constraint firstAttribute="width" constant="291" id="pro-gy-SvQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemBlueColor"/>
+                                <size key="shadowOffset" width="6" height="3"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(insert time here)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBB-Iw-ooO">
+                                <rect key="frame" x="34" y="387" width="325" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="SsV-vF-3aX"/>
+                                    <constraint firstAttribute="width" constant="325" id="k86-SK-yHQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemBlueColor"/>
+                                <size key="shadowOffset" width="6" height="3"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SOV-Qq-Df1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PUn-Kx-oqA" firstAttribute="top" secondItem="SOV-Qq-Df1" secondAttribute="top" id="Lj1-1s-c75"/>
+                            <constraint firstItem="36w-ab-icz" firstAttribute="top" secondItem="SOV-Qq-Df1" secondAttribute="top" constant="170" id="Oer-sz-K7F"/>
+                            <constraint firstItem="PUn-Kx-oqA" firstAttribute="trailing" secondItem="SOV-Qq-Df1" secondAttribute="trailing" id="Pki-Zt-KNc"/>
+                            <constraint firstItem="36w-ab-icz" firstAttribute="centerX" secondItem="btO-Bf-SRh" secondAttribute="centerX" id="Zb5-fA-GRo"/>
+                            <constraint firstItem="PUn-Kx-oqA" firstAttribute="leading" secondItem="SOV-Qq-Df1" secondAttribute="leading" id="jbY-yZ-maa"/>
+                            <constraint firstItem="PUn-Kx-oqA" firstAttribute="bottom" secondItem="SOV-Qq-Df1" secondAttribute="bottom" id="oqn-q9-LLO"/>
+                            <constraint firstItem="nBB-Iw-ooO" firstAttribute="top" secondItem="36w-ab-icz" secondAttribute="bottom" constant="110" id="umB-DD-uqd"/>
+                            <constraint firstItem="nBB-Iw-ooO" firstAttribute="centerX" secondItem="btO-Bf-SRh" secondAttribute="centerX" id="z3D-1f-etX"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Date" image="calendar" catalog="system" id="fZ1-Vx-oYB"/>
+                    <connections>
+                        <outlet property="Date" destination="36w-ab-icz" id="sPP-5H-QMQ"/>
+                        <outlet property="Time" destination="nBB-Iw-ooO" id="rPS-to-ESy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c4M-wx-icA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-457" y="15"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="imM-kn-qyx">
+            <objects>
+                <tabBarController id="XHy-Lf-TvL" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gDc-8y-AhJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="GeC-7T-CTo" kind="relationship" relationship="viewControllers" id="few-7b-jqB"/>
+                        <segue destination="Sqx-az-2pD" kind="relationship" relationship="viewControllers" id="619-3T-8hv"/>
+                        <segue destination="mYx-jo-COj" kind="relationship" relationship="viewControllers" id="UrD-0N-zDh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rQp-4C-NzO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1483" y="232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Hand-Holding-Classic-Stopwatch-Timer-Graphics-4253899-1.png" width="1201" height="801"/>
+        <image name="SpiralClock.jpeg" width="225" height="225"/>
+        <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="figure.dance" catalog="system" width="83" height="128"/>
+        <image name="playpause.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="stopwatch" catalog="system" width="121" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
